@@ -1,0 +1,60 @@
+@import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap');
+
+:root {
+    --branco: white;
+    --preto: black;
+    --cinza-claro: #e0e0e0;
+    --cinza-escuro: #333;
+    --fonte-desenhada: 'Permanent Marker', cursive;
+}
+
+body {
+    color: var(--preto);
+    background-color: var(--branco);
+    font-family: var(--fonte-desenhada);
+    text-align: center;
+}
+
+.titulo-principal {
+    font-size: 36px;
+    font-weight: bold;
+    text-shadow: 3px 3px var(--cinza-escuro);
+}
+
+.conteudo-senha {
+    background: var(--cinza-claro);
+    padding: 24px;
+    border: 5px solid var(--preto);
+    box-shadow: 5px 5px var(--cinza-escuro);
+}
+
+.parametro {
+    background: var(--branco);
+    border: 5px solid var(--preto);
+    padding: 20px;
+    box-shadow: 5px 5px var(--cinza-escuro);
+}
+
+.parametro-senha__botao {
+    background: var(--branco);
+    color: var(--preto);
+    border: 4px solid var(--preto);
+    padding: 20px;
+    font-size: 22px;
+    cursor: pointer;
+    box-shadow: 4px 4px var(--cinza-escuro);
+    font-family: var(--fonte-desenhada);
+}
+
+.parametro-senha__botao:hover {
+    box-shadow: 6px 6px var(--cinza-escuro);
+    transform: scale(1.1);
+}
+
+.barra {
+    background-color: var(--cinza-claro);
+    height: 30px;
+    width: 100%;
+    border: 3px solid var(--preto);
+}
+
