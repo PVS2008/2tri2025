@@ -1,60 +1,158 @@
-@import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto&family=Roboto+Mono&display=swap');
 
 :root {
     --branco: white;
-    --preto: black;
-    --cinza-claro: #e0e0e0;
-    --cinza-escuro: #333;
-    --fonte-desenhada: 'Permanent Marker', cursive;
+    --cor-de-fundo: #00162E;
+    --fundo-senha: #00244D;
+    --fundo-texto: #001E40;
+    --borda: #0075FF;
+    --roboto: 'Roboto', sans-serif;
+    --roboto-mono: 'Roboto Mono', monospace;
+}
+
+* {
+    font-weight: 400;
 }
 
 body {
-    color: var(--preto);
-    background-color: var(--branco);
-    font-family: var(--fonte-desenhada);
-    text-align: center;
+    color: var(--branco);
+    background-color: var(--cor-de-fundo);
+    font-family: var(--roboto);
 }
 
 .titulo-principal {
-    font-size: 36px;
-    font-weight: bold;
-    text-shadow: 3px 3px var(--cinza-escuro);
+    font-family: var(--roboto-mono);
+    font-size: 32px;
+}
+
+.titulo-secundario {
+    font-size: 24px;
+}
+
+.conteudo-titulo {
+    text-align: center;
+    margin-top: 80px;
 }
 
 .conteudo-senha {
-    background: var(--cinza-claro);
+    margin-top: 80px;
+    background: var(--fundo-senha);
     padding: 24px;
-    border: 5px solid var(--preto);
-    box-shadow: 5px 5px var(--cinza-escuro);
+    border-bottom: 6px solid var(--borda);
+}
+
+#campo-senha {
+    background-color: var(--fundo-senha);
+    border: none;
+    color: var(--branco);
+    font-family: var(--roboto-mono);
+    font-size: 40px;
+    width: 70%;
+}
+
+#campo-senha:focus {
+    outline: none;
+}
+
+.conteudo {
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
 .parametro {
-    background: var(--branco);
-    border: 5px solid var(--preto);
-    padding: 20px;
-    box-shadow: 5px 5px var(--cinza-escuro);
+    background-color: var(--fundo-texto);
+    border: 2px solid var(--borda);
+    margin-top: 32px;
+    padding: 24px;
+}
+
+.parametro-titulo {
+    font-family: var(--roboto-mono);
+    font-size: 28px;
+}
+
+.parametro-senha__titulo {
+    font-size: 24px;
+}
+
+.parametro-coluna__senha {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.parametro-senha {
+    width: 50%;
+    margin: 0 auto;
+}
+
+.parametro-senha-botoes {
+    display: flex;
+    justify-content: center;
 }
 
 .parametro-senha__botao {
-    background: var(--branco);
-    color: var(--preto);
-    border: 4px solid var(--preto);
-    padding: 20px;
-    font-size: 22px;
+    background-color: var(--fundo-texto);
+    color: var(--branco);
+    border: 2px solid var(--borda);
+    padding: 24px;
+    font-size: 24px;
     cursor: pointer;
-    box-shadow: 4px 4px var(--cinza-escuro);
-    font-family: var(--fonte-desenhada);
 }
 
-.parametro-senha__botao:hover {
-    box-shadow: 6px 6px var(--cinza-escuro);
-    transform: scale(1.1);
+.parametro-senha__texto {
+    padding: 24px;
+    border-top: 2px solid var(--borda);
+    border-bottom: 2px solid var(--borda);
+    margin: 0;
+    font-size: 24px;
+}
+
+label {
+    font-size: 20px;
+}
+
+.checkbox {
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
 }
 
 .barra {
-    background-color: var(--cinza-claro);
+    background-color: var(--fundo-senha);
     height: 30px;
     width: 100%;
-    border: 3px solid var(--preto);
 }
 
+.forca {
+    height: 30px;
+    position: relative;
+    bottom: 30px;
+}
+
+.fraca {
+    width: 25%;
+    background-color: #E71B32;
+}
+
+.media {
+    background-color: #FAF408;
+    width: 50%;
+}
+
+.forte {
+    background-color: #00FF85;
+    width: 100%;
+}
+
+.parametro-senha-textos {
+    display: flex;
+    justify-content: space-between;
+}
+
+
+@media screen and (min-width: 768px) {
+    .parametro-coluna__senha {
+        flex-direction: row;
+    }
+}
